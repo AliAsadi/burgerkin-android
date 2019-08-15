@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:facebook="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <TextView android:layout_width="wrap_content"
+
+              android:text="Login to BurgerKin"
+              android:layout_height="wrap_content" facebook:layout_constraintEnd_toEndOf="parent"
+              android:textSize="18sp"
+              android:textColor="#000"
+              android:textStyle="bold|italic"
+              android:layout_marginTop="28dp"
+              facebook:layout_constraintTop_toTopOf="parent" android:id="@+id/textView"
+              facebook:layout_constraintStart_toStartOf="parent" facebook:layout_constraintHorizontal_bias="0.18"/>
+
+
+    <com.facebook.login.widget.LoginButton
+            android:id="@+id/loginButton"
+            android:layout_width="0dp"
+            facebook:com_facebook_login_text="Login with Facebook"
+            facebook:com_facebook_logout_text="LOGOUT"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            facebook:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginTop="32dp"
+            facebook:layout_constraintStart_toStartOf="@+id/textView"
+            android:layout_marginEnd="32dp" facebook:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar android:layout_width="0dp" android:layout_height="0dp"
+                 android:id="@+id/progressBar"
+                 android:visibility="gone"
+                 facebook:layout_constraintTop_toBottomOf="@+id/loginButton" android:layout_marginBottom="24dp"
+                 facebook:layout_constraintBottom_toBottomOf="parent" facebook:layout_constraintEnd_toEndOf="parent"
+                 android:layout_marginEnd="24dp" facebook:layout_constraintStart_toStartOf="parent"
+                 android:layout_marginStart="24dp" android:layout_marginTop="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
